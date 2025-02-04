@@ -1,31 +1,38 @@
 import { motion } from "framer-motion";
 
-const Loader = ({ loading }: { loading: boolean }) => {
+const Loader = ({
+  loading,
+  setHasLoaded,
+}: {
+  loading: boolean;
+  setHasLoaded: React.Dispatch<React.SetStateAction<boolean>>;
+}) => {
   return (
     <motion.div
-      className={`fixed inset-0 h-screen w-full bg-black`}
+      className={`fixed inset-0 h-screen w-screen bg-black z-50`}
       initial={{ opacity: 1 }}
       animate={{
         opacity: loading ? 1 : 0,
-        transition: { duration: 1.0, delay: 2.25 },
+        transition: { duration: 1.0, delay: 2.0 },
+      }}
+      onAnimationComplete={() => {
+        if (!loading) {
+          setHasLoaded(true);
+        }
       }}
     >
       <motion.div
         id="loading-logo"
-        className={`font-amulya text-white max-w-7xl mx-auto px-5 py-5 relative`}
+        className={`w-full font-amulya text-white max-w-8xl mx-auto relative px-5 py-5 `}
         initial={{
-          top: "50%",
-          left: "50%",
-          translateX: "-50%",
-          translateY: "-50%",
+          top: "calc(50% - 40px)",
+          left: "calc(50% - 40px)",
         }}
         animate={{
-          top: loading ? "50%" : "0%",
-          left: loading ? "50%" : "0%",
-          translateX: loading ? "-50%" : "0%",
-          translateY: loading ? "-50%" : "0%",
+          top: loading ? "calc(50% - 40px)" : "0%",
+          left: loading ? "calc(50% - 40px)" : "0%",
         }}
-        transition={{ duration: 1.85, ease: "easeInOut" }}
+        transition={{ duration: 1.5, ease: "easeInOut" }}
       >
         <div className="flex gap-2">
           <div className="flex flex-col items-center text-2xl">
