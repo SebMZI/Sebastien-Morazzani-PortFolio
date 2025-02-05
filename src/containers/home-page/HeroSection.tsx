@@ -1,7 +1,7 @@
 import { useEffect, useState, useContext } from "react";
 import { motion } from "framer-motion";
 import { AppContext } from "@/pages/_app";
-import Link from "next/link";
+import FlipLinks from "@/components/FlipLinks";
 
 const HeroSection = () => {
   const { hasLoaded } = useContext(AppContext);
@@ -105,13 +105,13 @@ const HeroSection = () => {
           <nav>
             <ul className="flex justify-end gap-8 opacity-50">
               <li>
-                <Link href={"/"}>PROJECTS</Link>
+                <FlipLinks href="/">projects</FlipLinks>
               </li>
               <li>
-                <Link href={"/"}>ABOUT</Link>
+                <FlipLinks href="/">about</FlipLinks>
               </li>
               <li>
-                <Link href={"/"}>CONTACT</Link>
+                <FlipLinks href="/">contact</FlipLinks>
               </li>
             </ul>
           </nav>
