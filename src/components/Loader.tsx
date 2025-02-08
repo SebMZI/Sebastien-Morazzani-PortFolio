@@ -23,14 +23,14 @@ const Loader = ({
     >
       <motion.div
         id="loading-logo"
-        className={`w-full font-amulya text-white max-w-8xl mx-auto relative px-5 py-5 `}
+        className={`w-full font-amulya text-white max-w-8xl mx-auto relative px-10 py-5 `}
         initial={{
           top: "calc(50% - 40px)",
-          left: "calc(50% - 40px)",
+          left: "calc(50% - 80px)",
         }}
         animate={{
           top: loading ? "calc(50% - 40px)" : "0%",
-          left: loading ? "calc(50% - 40px)" : "0%",
+          left: loading ? "calc(50% - 80px)" : "0%",
         }}
         transition={{ duration: 1.5, ease: [0.65, 0, 0.35, 1] }}
       >
