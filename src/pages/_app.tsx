@@ -32,7 +32,16 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      {!hasLoaded && <Loader loading={isLoading} setHasLoaded={setHasLoaded} />}
+      {!hasLoaded && (
+        <>
+          <style jsx global>{`
+            body {
+              overflow: hidden;
+            }
+          `}</style>
+          <Loader loading={isLoading} setHasLoaded={setHasLoaded} />
+        </>
+      )}
       <AppContext.Provider value={{ hasLoaded: hasLoaded }}>
         <Component {...pageProps} />
       </AppContext.Provider>

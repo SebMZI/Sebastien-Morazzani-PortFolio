@@ -124,9 +124,9 @@ const HeroSection = () => {
             }}
           />
         </svg>
-        <div className="my-20 flex justify-between items-end text-3xl">
+        <div className="my-20 flex justify-between items-end lg:text-2xl">
           <span>01/</span>
-          <h1 className="text-right w-7/12">
+          <h1 className="text-right w-9/12">
             <span className="block text-right">
               {heading1.split("").map((l, i) => {
                 return (
@@ -136,7 +136,7 @@ const HeroSection = () => {
                     transition={{
                       duration: 0.2,
                       ease: "easeInOut",
-                      delay: 0.03 * (heading1.length - i),
+                      delay: 0.02 * (heading1.length - i),
                     }}
                     key={i}
                   >
@@ -154,7 +154,7 @@ const HeroSection = () => {
                     transition={{
                       duration: 0.2,
                       ease: "easeInOut",
-                      delay: 0.03 * (heading2.length - i),
+                      delay: 0.02 * (heading2.length - i),
                     }}
                     key={i}
                   >
