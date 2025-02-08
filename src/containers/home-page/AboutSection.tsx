@@ -13,8 +13,8 @@ const AboutSection = () => {
   const heading2 = "developer based in France.";
   const { scrollY } = useScroll();
 
-  const [prevScrollY, setPrevScrollY] = useState(0); // to store the previous scroll position
-  const [direction, setDirection] = useState(1); // initial direction
+  const [prevScrollY, setPrevScrollY] = useState(0);
+  const [direction, setDirection] = useState(-1);
   const x = useMotionValue(0);
 
   const xTranslate = useTransform(x, (value) => `${value}%`);
@@ -25,9 +25,9 @@ const AboutSection = () => {
       const diff = currentScrollY - prevScrollY;
 
       if (diff > 0) {
-        setDirection(1);
-      } else if (diff < 0) {
         setDirection(-1);
+      } else if (diff < 0) {
+        setDirection(1);
       }
       setPrevScrollY(currentScrollY);
     };
@@ -44,11 +44,11 @@ const AboutSection = () => {
     if (x.get() > 0) {
       x.set(-100);
     }
-    x.set(x.get() + direction * 0.04); // move based on the current direction
+    x.set(x.get() + direction * 0.04);
   });
 
   return (
-    <section className="mt-60 overflow-hidden px-10 py-5">
+    <section className="mt-60 overflow-hidden px-10 pt-5 pb-32">
       <div className="max-w-8xl mx-auto relative">
         <motion.span
           initial={{ opacity: 0 }}
