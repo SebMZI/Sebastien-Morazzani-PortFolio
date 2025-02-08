@@ -19,19 +19,30 @@ const AboutSection = () => {
                     className="overflow-hidden uppercase lg:text-[148px] w-fit"
                   >
                     <motion.span
-                      initial={{ x: "100%" }}
+                      initial={{ x: "-100%" }}
                       whileInView={{ x: 0 }}
                       transition={{
                         ease: [0.65, 0, 0.35, 1],
-                        duration: 0.4,
+                        duration: 0.75,
+                        delay: 0.08 * i,
                       }}
+                      className="inline-block"
                     >
                       {l}
                     </motion.span>
                   </div>
                 ))}
               </div>
-              <span className="h-1 bg-white inline-block opacity-50 w-full"></span>
+              <motion.span
+                initial={{ scaleX: 0, originX: 0 }}
+                whileInView={{ scaleX: 1, originX: 0 }}
+                transition={{
+                  ease: [0.65, 0, 0.35, 1],
+                  duration: 0.75,
+                  delay: 0.2,
+                }}
+                className="h-1 bg-white inline-block opacity-50 w-full origin-left"
+              ></motion.span>
             </div>
 
             <div className="lg:text-2xl indent-8">

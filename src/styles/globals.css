@@ -34,3 +34,24 @@ body {
   background: var(--background);
   font-family: "Akkurat", Arial, Helvetica, sans-serif;
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f186;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #000000bd;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #00000096;
+}
