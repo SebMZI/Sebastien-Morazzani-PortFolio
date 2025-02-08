@@ -12,23 +12,25 @@ const AboutSection = () => {
         <div className="flex justify-between mt-4 gap-6">
           <div>
             <div className="flex items-center gap-20 w-full">
-              {"hi".split("").map((l, i) => (
-                <div
-                  key={i}
-                  className="overflow-hidden uppercase lg:text-[148px] w-full"
-                >
-                  <motion.span
-                    initial={{ x: "100%" }}
-                    whileInView={{ x: 0 }}
-                    transition={{
-                      ease: [0.65, 0, 0.35, 1],
-                      duration: 0.4,
-                    }}
+              <div className="flex w-full">
+                {"hi".split("").map((l, i) => (
+                  <div
+                    key={i}
+                    className="overflow-hidden uppercase lg:text-[148px] w-fit"
                   >
-                    {l}
-                  </motion.span>
-                </div>
-              ))}
+                    <motion.span
+                      initial={{ x: "100%" }}
+                      whileInView={{ x: 0 }}
+                      transition={{
+                        ease: [0.65, 0, 0.35, 1],
+                        duration: 0.4,
+                      }}
+                    >
+                      {l}
+                    </motion.span>
+                  </div>
+                ))}
+              </div>
               <span className="h-1 bg-white inline-block opacity-50 w-full"></span>
             </div>
 
