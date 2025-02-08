@@ -23,6 +23,10 @@ const HeroSection = () => {
     return () => clearInterval(timer);
   }, []);
 
+  const heading1: string =
+    "AN INDEPENDANT WEBDEVELOPER BASED IN NANTES WITH AN INTEREST IN";
+  const heading2: string = "SOLVING YOUR PROBLEMS TO CREATE ORIGINAL PROJECTS.";
+
   return (
     <section>
       <div className="max-w-8xl mx-auto px-5 py-5">
@@ -39,7 +43,22 @@ const HeroSection = () => {
               </div>
             </div>
           </div>
-          <p className="text-white font-akkurat">NANTES, FR, {time}</p>
+          <div className="overflow-hidden">
+            <motion.p
+              initial={{ translateY: "100%" }}
+              animate={{
+                translateY: hasLoaded ? "0%" : "100%",
+              }}
+              transition={{
+                duration: 1.0,
+                delay: 1.5,
+                ease: [0.65, 0, 0.35, 1],
+              }}
+              className="text-white font-akkurat"
+            >
+              NANTES, FR, {time}
+            </motion.p>
+          </div>
         </div>
         <svg
           width="1317"
@@ -56,7 +75,11 @@ const HeroSection = () => {
             animate={{
               translateY: hasLoaded ? "0%" : "100%",
             }}
-            transition={{ duration: 1.0, delay: 0.0, ease: "easeOut" }}
+            transition={{
+              duration: 0.75,
+              delay: 0.0,
+              ease: [0.65, 0, 0.35, 1],
+            }}
           />
 
           <motion.path
@@ -66,7 +89,11 @@ const HeroSection = () => {
             animate={{
               translateY: hasLoaded ? "0%" : "100%",
             }}
-            transition={{ duration: 1.0, delay: 0.25, ease: "easeOut" }}
+            transition={{
+              duration: 0.75,
+              delay: 0.25,
+              ease: [0.65, 0, 0.35, 1],
+            }}
           />
 
           <motion.path
@@ -76,7 +103,11 @@ const HeroSection = () => {
             animate={{
               translateY: hasLoaded ? "0%" : "100%",
             }}
-            transition={{ duration: 1.0, delay: 0.5, ease: "easeOut" }}
+            transition={{
+              duration: 0.75,
+              delay: 0.5,
+              ease: [0.65, 0, 0.35, 1],
+            }}
           />
 
           <motion.path
@@ -86,24 +117,97 @@ const HeroSection = () => {
             animate={{
               translateY: hasLoaded ? "0%" : "100%",
             }}
-            transition={{ duration: 1.0, delay: 0.75, ease: "easeOut" }}
+            transition={{
+              duration: 0.75,
+              delay: 0.75,
+              ease: [0.65, 0, 0.35, 1],
+            }}
           />
         </svg>
         <div className="my-20 flex justify-between items-end text-3xl">
           <span>01/</span>
           <h1 className="text-right w-7/12">
-            AN INDEPENDANT WEBDEVELOPER BASED IN NANTES WITH AN INTEREST IN
-            SOLVING YOUR PROBLEMS TO CREATE ORIGINAL PROJECTS.
+            <span className="block text-right">
+              {heading1.split("").map((l, i) => {
+                return (
+                  <motion.span
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: hasLoaded ? 1 : 0 }}
+                    transition={{
+                      duration: 0.2,
+                      ease: "easeInOut",
+                      delay: 0.03 * (heading1.length - i),
+                    }}
+                    key={i}
+                  >
+                    {l}
+                  </motion.span>
+                );
+              })}
+            </span>
+            <span className="block text-right">
+              {heading2.split("").map((l, i) => {
+                return (
+                  <motion.span
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: hasLoaded ? 1 : 0 }}
+                    transition={{
+                      duration: 0.2,
+                      ease: "easeInOut",
+                      delay: 0.03 * (heading2.length - i),
+                    }}
+                    key={i}
+                  >
+                    {l}
+                  </motion.span>
+                );
+              })}
+            </span>
           </h1>
         </div>
-        <div className="flex justify-between items-center">
-          <div className="flex justify-start gap-12">
+        <div className="flex justify-between items-center overflow-hidden">
+          <motion.div
+            initial={{ translateY: "100%" }}
+            animate={{
+              translateY: hasLoaded ? "0%" : "100%",
+            }}
+            transition={{
+              duration: 1.0,
+              delay: 1.85,
+              ease: [0.65, 0, 0.35, 1],
+            }}
+            className="flex justify-start gap-12"
+          >
             <p className="opacity-50">LOCATION</p>
             <span className="">47.218102°N, -1.552800°W</span>
-          </div>
-          <div>[ SCROLL ]</div>
-          <nav>
-            <ul className="flex justify-end gap-8 opacity-50">
+          </motion.div>
+          <motion.div
+            initial={{ translateY: "100%" }}
+            animate={{
+              translateY: hasLoaded ? "0%" : "100%",
+            }}
+            transition={{
+              duration: 1.0,
+              delay: 1.85,
+              ease: [0.65, 0, 0.35, 1],
+            }}
+          >
+            <span className="text-white font-akkurat inline-block">
+              [ SCROLL ]
+            </span>
+          </motion.div>
+          <motion.nav
+            initial={{ translateY: "100%" }}
+            animate={{
+              translateY: hasLoaded ? "0%" : "100%",
+            }}
+            transition={{
+              duration: 1.0,
+              delay: 1.85,
+              ease: [0.65, 0, 0.35, 1],
+            }}
+          >
+            <ul className="flex justify-end gap-8">
               <li>
                 <FlipLinks href="/">projects</FlipLinks>
               </li>
@@ -114,7 +218,7 @@ const HeroSection = () => {
                 <FlipLinks href="/">contact</FlipLinks>
               </li>
             </ul>
-          </nav>
+          </motion.nav>
         </div>
       </div>
     </section>

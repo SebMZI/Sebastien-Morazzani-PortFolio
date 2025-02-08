@@ -32,7 +32,7 @@ const Loader = ({
           top: loading ? "calc(50% - 40px)" : "0%",
           left: loading ? "calc(50% - 40px)" : "0%",
         }}
-        transition={{ duration: 1.5, ease: "easeInOut" }}
+        transition={{ duration: 1.5, ease: [0.65, 0, 0.35, 1] }}
       >
         <div className="flex gap-2">
           <div className="flex flex-col items-center text-2xl">

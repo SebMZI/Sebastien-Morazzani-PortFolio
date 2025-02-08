@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 const DURATION = 0.25;
-const STAGGER = 0.05;
+const STAGGER = 0.025;
 const FlipLinks = ({ children, href }: { children: string; href: string }) => {
   return (
     <Link href={href}>
@@ -11,7 +11,7 @@ const FlipLinks = ({ children, href }: { children: string; href: string }) => {
         whileHover="hovered"
         initial="initial"
       >
-        <motion.div>
+       <motion.div>
           {children.split("").map((l, i) => {
             return (
               <motion.span
@@ -28,7 +28,7 @@ const FlipLinks = ({ children, href }: { children: string; href: string }) => {
                   ease: "easeInOut",
                   delay: STAGGER * i,
                 }}
-                className="inline-block"
+                className="inline-block opacity-50"
                 key={i}
               >
                 {l}
@@ -53,7 +53,7 @@ const FlipLinks = ({ children, href }: { children: string; href: string }) => {
                   ease: "easeInOut",
                   delay: STAGGER * i,
                 }}
-                className="inline-block"
+                className="inline-block opacity-1"
                 key={i}
               >
                 {l}

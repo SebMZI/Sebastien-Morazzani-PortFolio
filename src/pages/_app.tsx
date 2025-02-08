@@ -15,12 +15,12 @@ export default function App({ Component, pageProps }: AppProps) {
     if (document.readyState === "complete") {
       setTimeout(() => {
         setIsLoading(false);
-      }, 4000);
+      }, 2000);
     } else {
       const handleLoad = () => {
         setTimeout(() => {
           setIsLoading(false);
-        }, 4000);
+        }, 2000);
       };
 
       window.addEventListener("load", handleLoad);
