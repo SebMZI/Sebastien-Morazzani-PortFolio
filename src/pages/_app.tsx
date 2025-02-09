@@ -39,11 +39,6 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      <motion.div
-        animate={{ x: x - cursorSize / 2, y: y - cursorSize / 2 }}
-        transition={{ type: "tween", ease: "backOut" }}
-        className="z-[99999] custom-cursor"
-      ></motion.div>
       {!hasLoaded && (
         <>
           <style jsx global>{`
@@ -55,6 +50,11 @@ export default function App({ Component, pageProps }: AppProps) {
         </>
       )}
       <AppContext.Provider value={{ hasLoaded: hasLoaded }}>
+        <motion.div
+          animate={{ x: x - cursorSize / 2, y: y - cursorSize / 2 }}
+          transition={{ type: "tween", ease: "backOut" }}
+          className="z-[2] custom-cursor"
+        ></motion.div>
         <Component {...pageProps} />
       </AppContext.Provider>
     </>
