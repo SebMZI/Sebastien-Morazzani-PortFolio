@@ -15,11 +15,13 @@ export default function App({ Component, pageProps }: AppProps) {
     if (document.readyState === "complete") {
       setTimeout(() => {
         setIsLoading(false);
+        window.scrollTo(0, 0);
       }, 2000);
     } else {
       const handleLoad = () => {
         setTimeout(() => {
           setIsLoading(false);
+          window.scrollTo(0, 0);
         }, 2000);
       };
 
