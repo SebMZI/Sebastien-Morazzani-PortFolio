@@ -1,7 +1,10 @@
+"use client";
 import { createContext, useEffect, useState } from "react";
 import Loader from "@/components/Loader";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
+import useMousePosition from "@/hooks/useMousePosition";
+import { motion } from "framer-motion";
 
 export const AppContext = createContext({
   hasLoaded: false,
@@ -10,6 +13,8 @@ export const AppContext = createContext({
 export default function App({ Component, pageProps }: AppProps) {
   const [isLoading, setIsLoading] = useState(true);
   const [hasLoaded, setHasLoaded] = useState(false);
+  const { x, y } = useMousePosition();
+  const cursorSize = 15;
 
   useEffect(() => {
     if (document.readyState === "complete") {
@@ -34,6 +39,11 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <>
+      <motion.div
+        animate={{ x: x - cursorSize / 2, y: y - cursorSize / 2 }}
+        transition={{ type: "tween", ease: "backOut" }}
+        className="z-[99999] custom-cursor"
+      ></motion.div>
       {!hasLoaded && (
         <>
           <style jsx global>{`

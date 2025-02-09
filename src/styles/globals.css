@@ -29,6 +29,10 @@
   --background: #000000;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--text-color);
   background: var(--background);
@@ -54,4 +58,12 @@ body {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #00000096;
+}
+
+.custom-cursor {
+  position: fixed;
+  border-radius: 50px;
+  width: 15px;
+  height: 15px;
+  background: red;
 }

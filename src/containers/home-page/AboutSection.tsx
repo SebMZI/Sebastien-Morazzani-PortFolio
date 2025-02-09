@@ -55,7 +55,7 @@ const AboutSection = () => {
           whileInView={{ opacity: 1 }}
           transition={{
             ease: [0.65, 0, 0.35, 1],
-            duration: 2.5,
+            duration: 2.0,
           }}
           className="lg:text-2xl"
         >
