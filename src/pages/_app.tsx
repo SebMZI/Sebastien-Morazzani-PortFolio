@@ -14,7 +14,7 @@ export default function App({ Component, pageProps }: AppProps) {
   const [isLoading, setIsLoading] = useState(true);
   const [hasLoaded, setHasLoaded] = useState(false);
   const { x, y } = useMousePosition();
-  const cursorSize = 15;
+  const cursorSize = 25;
 
   useEffect(() => {
     if (document.readyState === "complete") {
@@ -53,7 +53,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <motion.div
           animate={{ x: x - cursorSize / 2, y: y - cursorSize / 2 }}
           transition={{ type: "tween", ease: "backOut" }}
-          className="z-[2] custom-cursor"
+          className="z-[2] custom-cursor "
         ></motion.div>
         <Component {...pageProps} />
       </AppContext.Provider>

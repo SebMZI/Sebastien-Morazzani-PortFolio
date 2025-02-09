@@ -63,7 +63,8 @@ body {
 .custom-cursor {
   position: fixed;
   border-radius: 50px;
-  width: 15px;
-  height: 15px;
-  background: red;
+  width: 25px;
+  height: 25px;
+  background: white;
+  mix-blend-mode: difference;
 }

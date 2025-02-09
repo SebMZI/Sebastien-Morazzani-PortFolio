@@ -6,7 +6,7 @@ const STAGGER = 0.025;
 const FlipLinks = ({ children, href }: { children: string; href: string }) => {
   return (
     <>
-      <Link href={href} className="relative z-[8]">
+      <Link href={href} className="relative z-[8] mix-blend-difference">
         <motion.div
           className="relative overflow-hidden whitespace-nowrap uppercase"
           whileHover="hovered"
