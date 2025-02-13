@@ -8,7 +8,7 @@ export default function useMousePosition() {
         return () => window.removeEventListener("mousemove", updateMousePosition)
     }, [])
 
-    function updateMousePosition(e) {
+    function updateMousePosition(e :MouseEvent) {
         setMousePosition({x: e.clientX, y: e.clientY})
     }
 

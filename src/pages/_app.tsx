@@ -53,7 +53,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <motion.div
           animate={{ x: x - cursorSize / 2, y: y - cursorSize / 2 }}
           transition={{ type: "tween", ease: "backOut" }}
-          className="z-[2] custom-cursor "
+          className="z-[9999] custom-cursor hidden md:flex pointer-events-none"
         ></motion.div>
         <Component {...pageProps} />
       </AppContext.Provider>

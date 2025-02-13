@@ -4,7 +4,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer>
+    <footer id="contact">
       <div className="max-w-8xl mx-auto px-5 y-5 mt-60">
         <div className="flex flex-col gap-10 md:gap-16 mb-16 md:mb-32">
           <h2 className="uppercase text-3xl md:text-5xl">
@@ -24,16 +24,13 @@ const Footer = () => {
               <div className="flex gap-32">
                 <ul className="flex flex-col gap-2">
                   <li>
-                    <FlipLinks href="/">Test</FlipLinks>
+                    <FlipLinks href="/">Home</FlipLinks>
                   </li>
                   <li>
-                    <FlipLinks href="/">Test</FlipLinks>
+                    <FlipLinks href="/#about">About</FlipLinks>
                   </li>
                   <li>
-                    <FlipLinks href="/">Test</FlipLinks>
-                  </li>
-                  <li>
-                    <FlipLinks href="/">Test</FlipLinks>
+                    <FlipLinks href="/#my-projects">Work</FlipLinks>
                   </li>
                 </ul>
                 <ul className="flex flex-col gap-2">

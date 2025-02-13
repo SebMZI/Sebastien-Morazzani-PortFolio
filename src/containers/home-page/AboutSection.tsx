@@ -48,7 +48,10 @@ const AboutSection = () => {
   });
 
   return (
-    <section className="mt-60 overflow-hidden px-10 pt-5 pb-32">
+    <section
+      className="mt-32 md:mt-60 overflow-hidden px-10 pt-5 pb-32"
+      id="about"
+    >
       <div className="max-w-8xl mx-auto relative">
         <motion.span
           initial={{ opacity: 0 }}
@@ -62,14 +65,14 @@ const AboutSection = () => {
           02/
         </motion.span>
 
-        <div className="flex justify-between mt-4 gap-6">
+        <div className="flex flex-col md:flex-row justify-between mt-4 gap-12 md:gap-6">
           <div>
             <div className="flex items-center gap-20 w-full">
               <div className="flex w-full">
                 {"hi".split("").map((l, i) => (
                   <div
                     key={i}
-                    className="overflow-hidden uppercase lg:text-[148px] w-fit"
+                    className="overflow-hidden uppercase text-[100px] md:text-[148px] w-fit"
                   >
                     <motion.span
                       initial={{ x: "-100%" }}
@@ -132,7 +135,7 @@ const AboutSection = () => {
               </h2>
             </div>
           </div>
-          <div className="w-2/4 h-auto flex justify-end">
+          <div className="w-full md:w-2/4 h-auto flex justify-end">
             <Image
               src={"/sebastien-mzi.webp"}
               width={2396}
@@ -143,18 +146,18 @@ const AboutSection = () => {
           </div>
         </div>
 
-        <div className="absolute whitespace-nowrap flex z-10 -bottom-[23%]">
+        <div className="absolute whitespace-nowrap flex z-10 -bottom-[20%] md:-bottom-[35%] lg:-bottom-[23%]">
           <motion.p
             initial={{ x: "0%" }}
             style={{ x: xTranslate }}
-            className="uppercase text-[342px]"
+            className="uppercase text-[172px] lg:text-[342px]"
           >
             Sebastien Morazzani -
           </motion.p>
           <motion.p
             initial={{ x: "0%" }}
             style={{ x: xTranslate }}
-            className="uppercase text-[342px] absolute left-full"
+            className="uppercase text-[172px] lg:text-[342px] absolute left-full"
           >
             Sebastien Morazzani -
           </motion.p>

@@ -1,8 +1,13 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
+import projectsData from "@/data/ProjectsData.json";
+import Accordion from "@/components/Accordion";
 
 const WorkSection = () => {
+  const [expended, setExpended] = useState<number | boolean>(false);
+
   return (
-    <section className="mt-60 px-10 py-5">
+    <section className="mt-60 px-10 py-5" id="my-projects">
       <div className="max-w-8xl mx-auto">
         <motion.span
           initial={{ opacity: 0 }}
@@ -25,7 +30,7 @@ const WorkSection = () => {
             }}
             className="h-1 bg-white inline-block opacity-50 w-full origin-left"
           ></motion.span>
-          <div className="flex">
+          <h2 className="flex">
             {"work".split("").map((l, i) => (
               <div
                 key={i}
@@ -45,7 +50,24 @@ const WorkSection = () => {
                 </motion.span>
               </div>
             ))}
+          </h2>
+        </div>
+        <div className="mt-10">
+          <div className="flex w-full opacity-70 py-4">
+            <p className="w-[35vw]">Project</p>
+            <p className="w-[45vw] hidden md:block">Category</p>
+            <p className="w-[25vw] hidden md:block">Client</p>
+            <p>Year</p>
           </div>
+          {projectsData?.map((project, i) => (
+            <Accordion
+              key={i}
+              i={i}
+              expended={expended}
+              setExpended={setExpended}
+              project={project}
+            />
+          ))}
         </div>
       </div>
     </section>

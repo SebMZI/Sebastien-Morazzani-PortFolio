@@ -28,11 +28,11 @@ const HeroSection = () => {
   const heading2: string = "SOLVING YOUR PROBLEMS TO CREATE ORIGINAL PROJECTS.";
 
   return (
-    <section>
+    <section className="">
       <div className="max-w-8xl mx-auto px-10 py-5">
         <div className="flex justify-between items-center">
-          <div className="font-amulya text-white ">
-            <div className="flex gap-2">
+          <div className="md:fixed font-amulya mix-blend-difference text-white top-5">
+            <div className="flex gap-2 ">
               <div className="flex flex-col items-center text-2xl">
                 <span>S</span>
                 <span>Z</span>
@@ -43,7 +43,7 @@ const HeroSection = () => {
               </div>
             </div>
           </div>
-          <div className="overflow-hidden">
+          <div className="hidden md:block overflow-hidden w-full text-right mt-5">
             <motion.p
               initial={{ translateY: "100%" }}
               animate={{
@@ -66,7 +66,7 @@ const HeroSection = () => {
           viewBox="0 0 1317 372"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="w-full h-fit my-5 overflow-hidden"
+          className="w-full h-fit mt-12 mb-5 overflow-hidden z-[8]"
         >
           <motion.path
             d="M144.531 371.3C110.611 371.3 86.7611 360.17 59.2011 336.32L17.3311 366H14.1511L0.371135 235.09L4.08113 234.03L33.2311 288.09C57.6111 333.14 92.5911 365.47 142.941 365.47C186.401 365.47 208.661 336.85 208.661 302.93C208.661 190.57 12.0311 235.62 12.0311 97.29C12.0311 40.58 64.5011 0.29997 121.211 0.29997C155.131 0.29997 181.101 16.2 201.771 38.46L240.461 5.6H243.641L252.651 125.91L248.941 126.97L224.031 82.98C204.421 46.41 171.561 5.6 121.211 5.6C86.7611 5.6 66.6211 26.27 66.6211 58.07C66.6211 163.54 263.251 124.85 263.251 267.42C263.251 317.77 220.321 371.3 144.531 371.3Z"
@@ -209,13 +209,13 @@ const HeroSection = () => {
           >
             <ul className="flex justify-end gap-8">
               <li>
-                <FlipLinks href="/">projects</FlipLinks>
+                <FlipLinks href="/#my-projects">projects</FlipLinks>
               </li>
               <li>
-                <FlipLinks href="/">about</FlipLinks>
+                <FlipLinks href="/#about">about</FlipLinks>
               </li>
               <li>
-                <FlipLinks href="/">contact</FlipLinks>
+                <FlipLinks href="/#contact">contact</FlipLinks>
               </li>
             </ul>
           </motion.nav>
