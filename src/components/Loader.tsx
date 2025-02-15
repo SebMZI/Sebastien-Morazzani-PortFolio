@@ -68,7 +68,7 @@ const Loader = ({
                 delay: 0.25,
               }}
             >
-              M
+              B
             </motion.span>
             <motion.span
               animate={loading ? { scale: [1, 1.25, 1] } : { scale: 1 }}
