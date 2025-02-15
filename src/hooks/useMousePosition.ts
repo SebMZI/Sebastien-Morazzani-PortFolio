@@ -12,5 +12,5 @@ export default function useMousePosition() {
         setMousePosition({x: e.clientX, y: e.clientY})
     }
 
-    return mousePosition
+    return mousePosition 
 }
