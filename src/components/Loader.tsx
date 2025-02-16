@@ -79,7 +79,7 @@ const Loader = ({
                 delay: 0.5,
               }}
             >
-              C
+              p
             </motion.span>
           </div>
         </div>
