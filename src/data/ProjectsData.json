@@ -7,14 +7,14 @@
             "category": "Development"
         },
         "content": {
-            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur officia ab in. Expedita accusantium commodi, nihil similique repellat molestias velit quam accusamus odio, non optio vitae. Odio numquam aliquam voluptates temporibus quos tenetur adipisci quam ",
+            "text": "Developed and designed \"MaBoucherieFrançaise,\" an online butcher shop offering various meat cuts, using Next.js for a seamless user experience and enhanced SEO .",
             "link": "https://www.maboucheriefrancaise.com/",
             "images": [
                     {"href": "/1_mbf_site.png", "width": 1280, "height": 720},
                     {"href": "/2_mbf_site.png", "width": 1280, "height": 720},
                     {"href": "/3_mbf_site.png", "width": 1280, "height": 720}
                 ],
-            "tech": []
+            "tech": ["Next.js"]
         }
     },
     {
@@ -25,7 +25,7 @@
             "category": "Web Development, Development"
         },
         "content": {
-            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur officia ab in. Expedita accusantium commodi, nihil similique repellat molestias velit quam accusamus odio, non optio vitae. Odio numquam aliquam voluptates temporibus quos tenetur adipisci quam ",
+            "text": "Developed and designed \"Anrazzi\", an online platform offering premium FiveM scripts and tools for GTA 5 servers. The site provides a seamless user experience and is optimized for search engines to enhance visibility.",
             "link": "https://www.anrazzi.fr/",
             "images": [
                 {"href": "/1_fivem_site.png", "width": 1280, "height": 720},
