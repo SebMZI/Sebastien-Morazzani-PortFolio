@@ -7,7 +7,7 @@ const WorkSection = () => {
   const [expanded, setExpanded] = useState<number | boolean>(false);
 
   return (
-    <section className="mt-60 px-10 py-5" id="my-projects">
+    <section className="mt-60 px-5 md:px-10 py-5" id="my-projects">
       <div className="max-w-8xl mx-auto">
         <motion.span
           initial={{ opacity: 0 }}

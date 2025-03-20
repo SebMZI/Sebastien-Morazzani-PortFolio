@@ -29,7 +29,7 @@ const HeroSection = () => {
 
   return (
     <section className="">
-      <div className="max-w-8xl mx-auto px-10 py-5">
+      <div className="max-w-8xl mx-auto px-5 md:px-10 py-5">
         <div className="flex justify-between items-center">
           <div className="md:fixed font-amulya mix-blend-difference text-white top-5">
             <div className="flex gap-2 ">

@@ -49,7 +49,7 @@ const AboutSection = () => {
 
   return (
     <section
-      className="mt-32 md:mt-60 overflow-hidden px-10 pt-5 pb-32"
+      className="mt-32 md:mt-60 overflow-hidden px-5 md:px-10 pt-5 pb-32"
       id="about"
     >
       <div className="max-w-8xl mx-auto relative">
