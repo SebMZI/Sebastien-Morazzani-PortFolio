@@ -176,7 +176,7 @@ const HeroSection = () => {
               delay: 1.85,
               ease: [0.65, 0, 0.35, 1],
             }}
-            className="flex justify-start gap-12"
+            className="flex justify-between md:justify-start gap-12 w-full md:w-auto"
           >
             <p className="opacity-50">LOCATION</p>
             <span className="">47.218102°N, -1.552800°W</span>
@@ -197,6 +197,7 @@ const HeroSection = () => {
             </span>
           </motion.div>
           <motion.nav
+            className="w-full md:w-auto"
             initial={{ translateY: "100%" }}
             animate={{
               translateY: hasLoaded ? "0%" : "100%",
@@ -207,7 +208,7 @@ const HeroSection = () => {
               ease: [0.65, 0, 0.35, 1],
             }}
           >
-            <ul className="flex justify-end gap-8">
+            <ul className="flex justify-between md:justify-end gap-8 w-full md:w-auto">
               <li>
                 <FlipLinks target="" href="/#my-projects">
                   projects
