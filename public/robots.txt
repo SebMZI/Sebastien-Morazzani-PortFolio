@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sebastien-morazzani.com/sitemap.xml

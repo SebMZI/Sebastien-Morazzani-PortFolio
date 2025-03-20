@@ -41,8 +41,8 @@ const Footer = () => {
                 </ul>
                 <ul className="flex flex-col gap-2">
                   <li>
-                    <FlipLinks target="" href="/">
-                      privacy_policy
+                    <FlipLinks target="" href="/legal-notices">
+                      legal_notices
                     </FlipLinks>
                   </li>
                 </ul>

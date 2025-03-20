@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
+<url>
+  <loc>http://sebastien-morazzani-port-folio.vercel.app/#my-projects</loc>
+  <changefreq>monthly</changefreq>
+  <lastmod>2025-03-20</lastmod>
+</url>
+<url>
+  <loc>http://sebastien-morazzani-port-folio.vercel.app/#about</loc>
+  <changefreq>monthly</changefreq>
+  <lastmod>2025-03-20</lastmod>
+</url>
+<url>
+  <loc>http://sebastien-morazzani-port-folio.vercel.app/#contact</loc>
+  <changefreq>monthly</changefreq>
+  <lastmod>2025-03-20</lastmod>
+</url>
+<url>
+  <loc>http://sebastien-morazzani-port-folio.vercel.app/</loc>
+  <changefreq>monthly</changefreq>
+  <lastmod>2025-03-20</lastmod>
+</url>
+</urlset>
