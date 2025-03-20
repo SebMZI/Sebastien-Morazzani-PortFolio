@@ -209,13 +209,19 @@ const HeroSection = () => {
           >
             <ul className="flex justify-end gap-8">
               <li>
-                <FlipLinks href="/#my-projects">projects</FlipLinks>
+                <FlipLinks target="" href="/#my-projects">
+                  projects
+                </FlipLinks>
               </li>
               <li>
-                <FlipLinks href="/#about">about</FlipLinks>
+                <FlipLinks target="" href="/#about">
+                  about
+                </FlipLinks>
               </li>
               <li>
-                <FlipLinks href="/#contact">contact</FlipLinks>
+                <FlipLinks target="" href="/#contact">
+                  contact
+                </FlipLinks>
               </li>
             </ul>
           </motion.nav>

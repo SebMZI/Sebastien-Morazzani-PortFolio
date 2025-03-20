@@ -24,18 +24,26 @@ const Footer = () => {
               <div className="flex gap-32">
                 <ul className="flex flex-col gap-2">
                   <li>
-                    <FlipLinks href="/">Home</FlipLinks>
+                    <FlipLinks target="" href="/">
+                      Home
+                    </FlipLinks>
                   </li>
                   <li>
-                    <FlipLinks href="/#about">About</FlipLinks>
+                    <FlipLinks target="" href="/#about">
+                      About
+                    </FlipLinks>
                   </li>
                   <li>
-                    <FlipLinks href="/#my-projects">Work</FlipLinks>
+                    <FlipLinks target="" href="/#my-projects">
+                      Work
+                    </FlipLinks>
                   </li>
                 </ul>
                 <ul className="flex flex-col gap-2">
                   <li>
-                    <FlipLinks href="/">privacy_policy</FlipLinks>
+                    <FlipLinks target="" href="/">
+                      privacy_policy
+                    </FlipLinks>
                   </li>
                 </ul>
               </div>
