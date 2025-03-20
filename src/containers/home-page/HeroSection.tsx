@@ -35,10 +35,10 @@ const HeroSection = () => {
             <div className="flex gap-2 ">
               <div className="flex flex-col items-center text-2xl">
                 <span>S</span>
-                <span>M</span>
+                <span>Z</span>
               </div>
               <div className="flex flex-col items-center text-2xl">
-                <span>Z</span>
+                <span>M</span>
                 <span>I</span>
               </div>
             </div>
