@@ -125,8 +125,8 @@ const HeroSection = () => {
           />
         </svg>
         <div className="my-20 flex justify-between items-end lg:text-2xl">
-          <span>01/</span>
-          <h1 className="text-right w-9/12">
+          <span className="hidden md:block">01/</span>
+          <h1 className="text-right  w-full  md:w-9/12 ">
             <span className="block text-right">
               {heading1.split("").map((l, i) => {
                 return (
@@ -165,7 +165,7 @@ const HeroSection = () => {
             </span>
           </h1>
         </div>
-        <div className="flex justify-between items-center overflow-hidden">
+        <div className="flex flex-col-reverse gap-10 md:gap-0 md:flex-row justify-between items-center overflow-hidden">
           <motion.div
             initial={{ translateY: "100%" }}
             animate={{

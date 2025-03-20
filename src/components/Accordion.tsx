@@ -44,7 +44,7 @@ const Accordion = ({ i, expanded, setExpanded, project }: Props) => {
         className="flex justify-between border-t-[1px] border-white py-4 relative overflow-hidden group cursor-pointer"
         onClick={() => setExpanded(isOpen ? false : i)}
       >
-        <p className="w-[35vw] z-10 relative mix-blend-difference group-hover:translate-x-5 transition-all duration-300">
+        <p className="w-full md:w-[35vw] z-10 relative mix-blend-difference group-hover:translate-x-5 transition-all duration-300">
           {project.header.project_name}
         </p>
         <p className="w-[45vw] hidden md:block z-10 relative mix-blend-difference">
@@ -71,7 +71,7 @@ const Accordion = ({ i, expanded, setExpanded, project }: Props) => {
           transition={{ duration: 0.8, ease: [0.04, 0.62, 0.23, 0.98] }}
         >
           <div className="py-10">
-            <h3 className="mb-10 uppercase text-xl w-2/4">
+            <h3 className="mb-10 uppercase text-xl w-full md:w-2/4">
               {project.content.text}
             </h3>
             <FlipLinks target="_blank" href={project.content.link}>
