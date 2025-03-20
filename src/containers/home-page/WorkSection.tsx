@@ -4,7 +4,7 @@ import projectsData from "@/data/ProjectsData.json";
 import Accordion from "@/components/Accordion";
 
 const WorkSection = () => {
-  const [expended, setExpended] = useState<number | boolean>(false);
+  const [expanded, setExpanded] = useState<number | boolean>(false);
 
   return (
     <section className="mt-60 px-10 py-5" id="my-projects">
@@ -53,7 +53,7 @@ const WorkSection = () => {
           </h2>
         </div>
         <div className="mt-10">
-          <div className="flex w-full opacity-70 py-4">
+          <div className="flex justify-between w-full opacity-70 py-4">
             <p className="w-[35vw]">Project</p>
             <p className="w-[45vw] hidden md:block">Category</p>
             <p className="w-[25vw] hidden md:block">Client</p>
@@ -63,8 +63,8 @@ const WorkSection = () => {
             <Accordion
               key={i}
               i={i}
-              expended={expended}
-              setExpended={setExpended}
+              expanded={expanded}
+              setExpanded={setExpanded}
               project={project}
             />
           ))}

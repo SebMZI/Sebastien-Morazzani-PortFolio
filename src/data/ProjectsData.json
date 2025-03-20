@@ -7,7 +7,14 @@
             "category": "Development"
         },
         "content": {
-            "text": ""
+            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur officia ab in. Expedita accusantium commodi, nihil similique repellat molestias velit quam accusamus odio, non optio vitae. Odio numquam aliquam voluptates temporibus quos tenetur adipisci quam ",
+            "link": "https://www.maboucheriefrancaise.com/",
+            "images": [
+                    {"href": "/1_mbf_site.png", "width": 1280, "height": 720},
+                    {"href": "/2_mbf_site.png", "width": 1280, "height": 720},
+                    {"href": "/3_mbf_site.png", "width": 1280, "height": 720}
+                ],
+            "tech": []
         }
     },
     {
@@ -18,7 +25,16 @@
             "category": "Web Development, Development"
         },
         "content": {
-            "text": ""
+            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur officia ab in. Expedita accusantium commodi, nihil similique repellat molestias velit quam accusamus odio, non optio vitae. Odio numquam aliquam voluptates temporibus quos tenetur adipisci quam ",
+            "link": "https://www.anrazzi.fr/",
+            "images": [
+                {"href": "/1_fivem_site.png", "width": 1280, "height": 720},
+                {"href": "/2_fivem_site.png", "width": 1280, "height": 720},
+                {"href": "/3_fivem_site.png", "width": 1280, "height": 720}
+            ],
+            "tech": [
+                "Next.js", "Tebex API"
+            ]
         }
     }
 ]

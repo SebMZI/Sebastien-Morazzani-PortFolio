@@ -3,12 +3,24 @@ import Link from "next/link";
 
 const DURATION = 0.25;
 const STAGGER = 0.025;
-const FlipLinks = ({ children, href }: { children: string; href: string }) => {
+const FlipLinks = ({
+  children,
+  href,
+  target = "",
+}: {
+  children: string;
+  href: string;
+  target: string;
+}) => {
   return (
     <>
-      <Link href={href} className="relative z-[8] mix-blend-difference">
+      <Link
+        href={href}
+        className="relative z-[8] mix-blend-difference w-fit"
+        target={target}
+      >
         <motion.div
-          className="relative overflow-hidden whitespace-nowrap uppercase"
+          className="relative overflow-hidden whitespace-nowrap uppercase w-fit inline-block"
           whileHover="hovered"
           initial="initial"
         >
