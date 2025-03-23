@@ -1,5 +1,20 @@
 import { motion } from "framer-motion";
 
+const logoVariants = {
+  loading: {
+    top: "50%",
+    left: "50%",
+    x: "-50%",
+    y: "-50%",
+  },
+  loaded: {
+    top: 0,
+    left: 0,
+    x: 0,
+    y: 0,
+  },
+};
+
 const Loader = ({
   loading,
   setHasLoaded,
@@ -9,29 +24,23 @@ const Loader = ({
 }) => {
   return (
     <motion.div
-      className={`fixed inset-0 h-screen w-screen bg-black z-50`}
+      className="fixed inset-0 bg-black z-50"
       initial={{ opacity: 1 }}
       animate={{
         opacity: loading ? 1 : 0,
         transition: { duration: 1.0, delay: 2.0 },
       }}
       onAnimationComplete={() => {
-        if (!loading) {
-          setHasLoaded(true);
-        }
+        if (!loading) setHasLoaded(true);
       }}
     >
+      {/* Conteneur pour centrer le logo puis le repositionner */}
       <motion.div
         id="loading-logo"
-        className={`w-full font-amulya text-white max-w-8xl mx-auto relative px-10 py-5 `}
-        initial={{
-          top: "calc(50% - 40px)",
-          left: "calc(50% - 80px)",
-        }}
-        animate={{
-          top: loading ? "calc(50% - 40px)" : "0%",
-          left: loading ? "calc(50% - 80px)" : "0%",
-        }}
+        className="fixed z-50 px-5 md:px-10 py-5 font-amulya text-white"
+        variants={logoVariants}
+        initial="loading"
+        animate={loading ? "loading" : "loaded"}
         transition={{ duration: 1.5, ease: [0.65, 0, 0.35, 1] }}
       >
         <div className="flex gap-2">
