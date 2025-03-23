@@ -69,11 +69,8 @@ const AboutSection = () => {
           <div>
             <div className="flex items-center gap-20 w-full">
               <div className="flex w-full">
-                {"hi".split("").map((l, i) => (
-                  <div
-                    key={i}
-                    className="overflow-hidden uppercase text-[100px] md:text-[148px] w-fit"
-                  >
+                {["H", "I"].map((l, i) => (
+                  <div key={i} className="overflow-hidden uppercase w-fit">
                     <motion.span
                       initial={{ x: "-100%" }}
                       whileInView={{ x: 0 }}
@@ -82,7 +79,7 @@ const AboutSection = () => {
                         duration: 0.75,
                         delay: 0.08 * i,
                       }}
-                      className="inline-block"
+                      className="inline-block text-[100px] md:text-[148px] "
                     >
                       {l}
                     </motion.span>

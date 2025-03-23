@@ -31,11 +31,8 @@ const WorkSection = () => {
             className="h-1 bg-white inline-block opacity-50 w-full origin-left"
           ></motion.span>
           <h2 className="flex">
-            {"work".split("").map((l, i) => (
-              <div
-                key={i}
-                className="overflow-hidden uppercase lg:text-[148px] w-auto"
-              >
+            {["W", "O", "R", "K"].map((l, i) => (
+              <div key={i} className="overflow-hidden uppercase  w-fit">
                 <motion.span
                   initial={{ x: "-100%" }}
                   whileInView={{ x: 0 }}
@@ -44,7 +41,7 @@ const WorkSection = () => {
                     duration: 0.75,
                     delay: 0.08 * i,
                   }}
-                  className="inline-block"
+                  className="inline-block  md:text-[148px]"
                 >
                   {l}
                 </motion.span>
