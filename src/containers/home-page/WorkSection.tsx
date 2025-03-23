@@ -32,7 +32,10 @@ const WorkSection = () => {
           ></motion.span>
           <h2 className="flex">
             {["W", "O", "R", "K"].map((l, i) => (
-              <div key={i} className="overflow-hidden uppercase  w-fit">
+              <div
+                key={i}
+                className="overflow-hidden uppercase w-auto min-w-[18px]"
+              >
                 <motion.span
                   initial={{ x: "-100%" }}
                   whileInView={{ x: 0 }}
