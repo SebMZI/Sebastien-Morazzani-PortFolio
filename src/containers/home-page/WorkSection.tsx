@@ -34,17 +34,17 @@ const WorkSection = () => {
             {["W", "O", "R", "K"].map((l, i) => (
               <div
                 key={i}
-                className="overflow-hidden uppercase w-auto min-w-[18px]"
+                className="overflow-auto md:overflow-hidden uppercase w-auto min-w-[18px]"
               >
                 <motion.span
-                  initial={{ x: "-100%" }}
-                  whileInView={{ x: 0 }}
+                  initial={{ x: "-100%", opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1.0 }}
                   transition={{
                     ease: [0.65, 0, 0.35, 1],
                     duration: 0.75,
                     delay: 0.08 * i,
                   }}
-                  className="inline-block  md:text-[148px]"
+                  className="inline-block md:text-[148px]"
                 >
                   {l}
                 </motion.span>
