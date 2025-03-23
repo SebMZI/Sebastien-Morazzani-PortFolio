@@ -34,7 +34,7 @@ const WorkSection = () => {
             {"work".split("").map((l, i) => (
               <div
                 key={i}
-                className="overflow-hidden uppercase lg:text-[148px] w-fit"
+                className="overflow-hidden uppercase lg:text-[148px] w-auto"
               >
                 <motion.span
                   initial={{ x: "-100%" }}
