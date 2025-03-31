@@ -30,7 +30,7 @@ const WorkSection = () => {
             }}
             className="h-1 bg-white inline-block opacity-50 w-full origin-left"
           ></motion.span>
-          <h2 className="flex">
+          <h2 className="hidden md:flex">
             {["W", "O", "R", "K"].map((l, i) => (
               <div
                 key={i}
@@ -51,6 +51,7 @@ const WorkSection = () => {
               </div>
             ))}
           </h2>
+          <h2 className="uppercase text-base md:hidden block">Work</h2>
         </div>
         <div className="mt-10">
           <div className="flex justify-between w-full opacity-70 py-4">

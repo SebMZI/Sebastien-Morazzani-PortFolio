@@ -68,7 +68,7 @@ const AboutSection = () => {
         <div className="flex flex-col md:flex-row justify-between mt-4 gap-12 md:gap-6">
           <div>
             <div className="flex items-center gap-20 w-full">
-              <div className="flex w-full">
+              <div className="hidden md:flex w-full">
                 {["H", "I"].map((l, i) => (
                   <div key={i} className="overflow-hidden uppercase w-fit">
                     <motion.span
@@ -86,6 +86,7 @@ const AboutSection = () => {
                   </div>
                 ))}
               </div>
+              <h2 className="uppercase md:hidden block text-[100px]">Hi</h2>
               <motion.span
                 initial={{ scaleX: 0, originX: 0 }}
                 whileInView={{ scaleX: 1, originX: 0 }}
