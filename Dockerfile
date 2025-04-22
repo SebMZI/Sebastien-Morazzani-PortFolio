@@ -1,26 +1,48 @@
-FROM node:22-alpine AS build
+FROM node:22-alpine AS base
+
+FROM base AS deps
+
+RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
-# Copier les fichiers de dépendances
-COPY package*.json ./
+COPY package.json yarn.lock* package-lock.json* pnpm-lock.yaml* .npmrc* ./
+RUN \
+    if [ -f yarn.lock ]; then yarn --frozen-lockfile; \
+    elif [ -f package-lock.json ]; then npm ci; \
+    elif [ -f pnpm-lock.yaml ]; then corepack enable pnpm && pnpm i --frozen-lockfile; \
+    else echo "Lockfile not found." && exit 1; \
+    fi
 
-# Installer les dépendances
-RUN npm install
-
-# Copier le reste du code source
+FROM base AS builder
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-# Construire l'application
-RUN npm run build
+ENV NEXT_TELEMETRY_DISABLED=1
 
-# Étape de production
-FROM nginx:stable-alpine AS production
+RUN \
+    if [ -f yarn.lock ]; then yarn run build; \
+    elif [ -f package-lock.json ]; then npm run build; \
+    elif [ -f pnpm-lock.yaml ]; then corepack enable pnpm && pnpm run build; \
+    else echo "Lockfile not found." && exit 1; \
+    fi
 
-# Copier les fichiers construits depuis l'étape de build
-COPY --from=build /app/.next /usr/share/nginx/html
+FROM base AS runner
+WORKDIR /app
 
-# Exposer le port 5978 (port utilisé dans package.json)
+ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1
+
+RUN addgroup --system --gid 1001 nodejs
+RUN adduser --system --uid 1001 nextjs
+
+COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+
+USER nextjs
+
 EXPOSE 5978
 
-# Démarrer Nginx
-CMD ["nginx", "-g", "daemon off;"]
+ENV PORT=5978
+ENV HOSTNAME="0.0.0.0"
+CMD ["node", "server.js"]
