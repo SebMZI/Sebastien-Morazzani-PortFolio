@@ -134,11 +134,8 @@ const AboutSection = () => {
             </div>
           </div>
           <div className="w-full md:w-2/4 h-auto flex justify-end">
-            <Image
+            <img
               src={"/sebastien-mzi.webp"}
-              width={2396}
-              height={2520}
-              quality={80}
               alt="Photo portrait de Sébastien Morazzani (Sébastien Morazzani-Marigny)"
             />
           </div>
