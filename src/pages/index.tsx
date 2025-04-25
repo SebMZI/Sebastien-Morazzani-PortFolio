@@ -1,10 +1,23 @@
 import Head from "next/head";
+import { useEffect } from "react";
+import Lenis from "lenis";
 import HeroSection from "@/containers/home-page/HeroSection";
 import AboutSection from "@/containers/home-page/AboutSection";
 import WorkSection from "@/containers/home-page/WorkSection";
 import Footer from "@/containers/home-page/Footer";
 
 export default function Home() {
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }, []);
+
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "Person",
