@@ -11,9 +11,10 @@ jobs:
 
       # 2. Install Tailscale on the runner and join your Tailnet
       - name: Install & start Tailscale
-        uses: tailscale/github-action@v1
+        uses: tailscale/github-action@v3
         with:
           authkey: ${{ secrets.TAILSCALE_AUTHKEY }}
+          statedir: /tmp/tailscale-state/
           # optional: tailnet key expiry, e.g. --authkey-expiry=1h
 
       # 3. Wait for Tailscale to be up, then verify
