@@ -55,7 +55,7 @@ jobs:
           script: |
             cd /home/deploy/sites/sebastien-morazzani
             if [ ! -d "/home/deploy/sites/sebastien-morazzani/.git" ]; then
-              git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git /home/deploy/sites/sebastien-morazzani
+              git clone https://github.com/SebMZI/Sebastien-Morazzani-PortFolio /home/deploy/sites/sebastien-morazzani
             else
               cd /home/deploy/sites/sebastien-morazzani
               git pull origin main
