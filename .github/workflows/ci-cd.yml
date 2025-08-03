@@ -1,5 +1,7 @@
-on: push
 name: CI/CD Pipeline
+run-name: CI/CD Pipeline
+
+on: [push]
 
 jobs:
   build:
