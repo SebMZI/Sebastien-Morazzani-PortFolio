@@ -34,6 +34,15 @@ jobs:
           npm ci
           npm run build
 
+      - name: Write KEY to temp file & show size
+        run: |
+          echo "Saving KEY to file…"
+          printf '%s' "$KEY" > ./keyfile
+          echo "keyfile size (bytes):"
+          wc -c ./keyfile
+        env:
+          KEY: ${{ secrets.KEY }}
+
       # 5. Deploy via SSH over Tailscale
       - name: Deploy to server over Tailscale
         uses: appleboy/ssh-action@v1
