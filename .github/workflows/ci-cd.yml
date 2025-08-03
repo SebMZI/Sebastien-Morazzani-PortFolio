@@ -13,8 +13,9 @@ jobs:
       - name: Install & start Tailscale
         uses: tailscale/github-action@v3
         with:
-          authkey: ${{ secrets.TAILSCALE_AUTHKEY }}
-          statedir: /tmp/tailscale-state/
+          oauth-client-id: ${{ secrets.TS_OAUTH_CLIENT_ID }}
+          oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
+          tags: tag:smzi-ci
           # optional: tailnet key expiry, e.g. --authkey-expiry=1h
 
       # 3. Wait for Tailscale to be up, then verify
