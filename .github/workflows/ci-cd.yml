@@ -1,6 +1,6 @@
 name: CI/CD via Tailscale
 
-on: push
+on: [push, workflow_dispatch]
 
 jobs:
   deploy:
@@ -27,7 +27,7 @@ jobs:
       - name: Set up Node.js & build
         uses: actions/setup-node@v3
         with:
-          node-version: '22'
+          node-version: "22"
       - run: |
           npm ci
           npm run build
@@ -36,9 +36,9 @@ jobs:
       - name: Deploy to server over Tailscale
         uses: appleboy/ssh-action@v1
         with:
-          host: ${{ secrets.HOST }}        # Tailscale IP
+          host: ${{ secrets.HOST }} # Tailscale IP
           username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.KEY }}          # your SSH private key
+          key: ${{ secrets.KEY }} # your SSH private key
           port: ${{ secrets.PORT }}
           script: |
             cd /home/deploy/sites/sebastien-morazzani
