@@ -49,7 +49,8 @@ jobs:
         with:
           host: ${{ secrets.HOST }} # Tailscale IP
           username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.KEY }} # your SSH private key
+          password: ${{ secrets.PASSWORD }}
+          #key: ${{ secrets.KEY }} # your SSH private key
           port: ${{ secrets.PORT }}
           script: |
             cd /home/deploy/sites/sebastien-morazzani
