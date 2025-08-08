@@ -12,7 +12,7 @@ export const AppContext = createContext({
 
 export default function App({ Component, pageProps }: AppProps) {
   const [isLoading, setIsLoading] = useState(true);
-  const [hasLoaded, setHasLoaded] = useState(false);
+  const [hasLoaded, setHasLoaded] = useState(true);
   const { x, y } = useMousePosition();
   const cursorSize = 25;
 
