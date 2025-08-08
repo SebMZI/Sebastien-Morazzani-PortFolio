@@ -1,17 +1,16 @@
-version: '3.8'
-
 services:
   web:
     build:
       context: .
       dockerfile: Dockerfile
-      target: runner       
-    image: nextjs-app       
+      target: runner
+    image: nextjs-app:latest
+    container_name: sebastien-morazzani_portfolio
     ports:
-      - "5978:5978"         
+      - "5978:5978"
     environment:
       NODE_ENV: production
       NEXT_TELEMETRY_DISABLED: "1"
       PORT: "5978"
       HOSTNAME: "0.0.0.0"
-    restart: unless-stopped  
+    restart: unless-stopped
