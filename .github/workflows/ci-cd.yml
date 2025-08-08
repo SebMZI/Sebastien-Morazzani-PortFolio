@@ -6,10 +6,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      # 1. Checkout your code
-      - uses: actions/checkout@v3
-
-      # 2. Install Tailscale on the runner and join your Tailnet
       - name: Install & start Tailscale
         uses: tailscale/github-action@v3
         with:
@@ -18,48 +14,24 @@ jobs:
           tags: tag:smzi-ci
           # optional: tailnet key expiry, e.g. --authkey-expiry=1h
 
-      # 3. Wait for Tailscale to be up, then verify
       - name: Show Tailscale status
         run: |
           tailscale status
-          echo "Runner is now in your Tailnet, IPs:"
-          tailscale ip -4
+          echo "Runner is now in your Tailnet"
 
-      # 4. Build your Next.js app
-      - name: Set up Node.js & build
-        uses: actions/setup-node@v3
-        with:
-          node-version: "22"
-      - run: |
-          npm ci
-          npm run build
-
-      - name: Write KEY to temp file & show size
-        run: |
-          echo "Saving KEY to file…"
-          printf '%s' "$KEY" > ./keyfile
-          echo "keyfile size (bytes):"
-          wc -c ./keyfile
-        env:
-          KEY: ${{ secrets.KEY }}
-
-      # 5. Deploy via SSH over Tailscale
-      - name: Deploy to server over Tailscale
+      - name: Connect ssh to portainer
         uses: appleboy/ssh-action@v1
         with:
-          host: ${{ secrets.HOST }} # Tailscale IP
+          host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
-          #key: ${{ secrets.KEY }} # your SSH private key
+          key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
           script: |
-            cd /home/deploy/sites/sebastien-morazzani
-            if [ ! -d "/home/deploy/sites/sebastien-morazzani/.git" ]; then
-              git clone git@github.com:SebMZI/sebastien-morazzani.git /home/deploy/sites/sebastien-morazzani
-            else
-              cd /home/deploy/sites/sebastien-morazzani
-              git pull origin main
-            fi
-            npm install
-            npm run build
-            pm2 restart sebastien-morazzani || pm2 start npm --name "sebastien-morazzani" -- run start
+            cd /home/deploy/sites/sebastien-morazzani_portfolio
+            echo "🔄 Pulling latest code..."
+            git pull
+            echo "🐳 Building and deploying..."
+            docker compose up -d --build --force-recreate
+            echo "📊 Syncing Docker state..."
+            docker system events --since 1s --until 1s > /dev/null 2>&1 || true
+            echo "✅ Deployment complete!""
