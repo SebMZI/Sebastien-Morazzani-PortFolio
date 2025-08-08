@@ -30,7 +30,11 @@ jobs:
           script: |
             cd /home/deploy/sites/sebastien-morazzani_portfolio
             echo "🔄 Pulling latest code..."
-            git pull https://github.com/SebMZI/Sebastien-Morazzani-PortFolio.git
+            if [ ! -d ".git" ]; then
+              git clone https://github.com/SebMZI/Sebastien-Morazzani-PortFolio.git .
+            else
+              git pull
+            fi
             echo "🐳 Building and deploying..."
             docker compose up -d --build --force-recreate
             echo "📊 Syncing Docker state..."
