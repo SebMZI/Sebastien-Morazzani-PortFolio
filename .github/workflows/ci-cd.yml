@@ -39,4 +39,4 @@ jobs:
             docker compose up -d --build --force-recreate
             echo "📊 Syncing Docker state..."
             docker system events --since 1s --until 1s > /dev/null 2>&1 || true
-            echo "✅ Deployment complete!""
+            echo "✅ Deployment complete!"
