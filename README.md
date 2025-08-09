@@ -1,40 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# 🌟 SMZI's Portfolio
 
-## Getting Started
+A collection of my best web development projects, showcasing my skills in **JavaScript**, **React**, and modern web technologies.
 
-First, run the development server:
+---
+
+## 📑 Table of Contents
+- [About](#about)
+- [Tech Stack](#tech-stack)
+- [Live Demos](#live-demos)
+- [Projects](#projects)
+- [Installation](#installation)
+- [Contact](#contact)
+
+---
+
+## 📖 About
+This repository contains my personal developer portfolio, built to showcase my **front-end** and future **back-end** projects.  
+It demonstrates:
+- Clean and responsive UI design
+- Optimized performance
+- Real-world problem solving
+- API integrations
+- Smooth animations with Motion
+
+---
+
+## 🛠 Tech Stack
+**Frontend:** React, Next.js, Tailwind CSS, Framer Motion  
+**Backend:** _Not implemented yet_  
+**Database:** _Not implemented yet_  
+**Tools & Other:** Git, Docker, Vercel, Figma
+
+---
+
+## 🚀 Live Demos
+- **Portfolio Website:** [sebastien-morazzani.com](https://sebastien-morazzani.com)
+- **Ma Boucherie Française:** [maboucheriefrancaise.com](https://maboucheriefrancaise.com)
+
+---
+
+## 💼 Projects
+
+### 1. Ma Boucherie Française
+**Tech:** React, Next.js  
+An online French butcher shop offering a variety of meat cuts.  
+[🔗 Live Demo](https://maboucheriefrancaise.com) | 📂 Repo: _Confidential_
+
+---
+
+### 2. FiveM Eshop
+**Tech:** Next.js, Tailwind CSS, Tebex API  
+An online platform offering premium FiveM scripts and tools for GTA V servers.  
+[🔗 Live Demo](https://www.anrazzi.fr/) | [📂 Repo](https://github.com/SebMZI/anrazzi-tebex)
+
+---
+
+## 📦 Installation
+To run this project locally:
 
 ```bash
+# Clone the repository
+git clone https://github.com/username/portfolio.git
+
+# Navigate to project folder
+cd portfolio
+
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## 8️⃣ **Contact**
+## 📬 Contact
+I'm open to collaboration, freelance work, or full-time opportunities.
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+- **Email:** [mzi.sebastien@gmail.com](mailto:mzi.sebastien@gmail.com)
+- **LinkedIn:** [https://www.linkedin.com/in/sebastien-morazzani/](https://www.linkedin.com/in/sebastien-morazzani/)
