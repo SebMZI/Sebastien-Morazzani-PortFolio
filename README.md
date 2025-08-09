@@ -5,12 +5,12 @@ A collection of my best web development projects, showcasing my skills in **Java
 ---
 
 ## 📑 Table of Contents
-- [About](#about)
-- [Tech Stack](#tech-stack)
-- [Live Demos](#live-demos)
-- [Projects](#projects)
-- [Installation](#installation)
-- [Contact](#contact)
+- [About](#📖-about)
+- [Tech Stack](#🛠-tech-stack)
+- [Live Demos](#🚀-live-demos)
+- [Projects](#💼-projects)
+- [Installation](#📦-installation)
+- [Contact](#8️⃣-contact)
 
 ---
 
